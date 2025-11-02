@@ -16,7 +16,7 @@ const headphonesProducts = [
     isNew: true,
     description: 'Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.',
     image: '/images/shared/desktop/image-category-earphones.png',
-    slug: 'product/xx99-mark-two-headphones'
+    slug: 'product/yxi-wireless-earphones'
   },
 ];
 

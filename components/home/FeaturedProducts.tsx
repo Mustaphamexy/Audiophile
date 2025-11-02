@@ -76,7 +76,7 @@ export default function FeaturedProducts() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-3 lg:gap-8">
           <div className="rounded-lg overflow-hidden h-36 md:h-64">
             <img 
-              src="/images/desktop/image-earphones-yx1.png" 
+              src="/images/desktop/image-earphones-YX1.png" 
               alt="YX1 Earphones"
               className="w-full h-full object-cover"
             />
@@ -88,7 +88,7 @@ export default function FeaturedProducts() {
                 YX1 EARPHONES
               </h4>
               <button
-                onClick={() => router.push("/product/yx1-earphones")}
+                onClick={() => router.push("/product/yxi-wireless-earphones")}
                 className="border-2 border-very-dark bg-transparent hover:bg-very-dark hover:text-white text-very-dark text-xs font-bold uppercase px-8 py-3 transition-colors"
               >
                 SEE PRODUCT
