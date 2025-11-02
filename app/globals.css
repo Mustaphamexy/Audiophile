@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-raw-sienna: #D87D4A;
+  --color-pale-orange: #FBAF85;
+  --color-very-dark: #101010;
+  --color-dark-grey: #191919;
+  --color-off-white: #F1F1F1;
+  --color-light-grey: #FAFAFA;
+  
+  --font-family-manrope: 'Manrope', sans-serif;
+  
+  --text-h1: 56px;
+  --line-height-h1: 58px;
+  --letter-spacing-h1: 2px;
+  
+  --text-h2: 40px;
+  --line-height-h2: 44px;
+  --letter-spacing-h2: 1.5px;
+  
+  --text-h3: 32px;
+  --line-height-h3: 36px;
+  --letter-spacing-h3: 1.15px;
+  
+  --text-h4: 28px;
+  --line-height-h4: 38px;
+  --letter-spacing-h4: 2px;
+  
+  --text-h5: 24px;
+  --line-height-h5: 33px;
+  --letter-spacing-h5: 1.7px;
+  
+  --text-h6: 18px;
+  --line-height-h6: 24px;
+  --letter-spacing-h6: 1.3px;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-family-manrope);
+  }
+  
+  h1 {
+    font-size: var(--text-h1);
+    line-height: var(--line-height-h1);
+    letter-spacing: var(--letter-spacing-h1);
+  }
+  
+  h2 {
+    font-size: var(--text-h2);
+    line-height: var(--line-height-h2);
+    letter-spacing: var(--letter-spacing-h2);
+  }
+
+  h3 {
+    font-size: var(--text-h3);
+    line-height: var(--line-height-h3);
+    letter-spacing: var(--letter-spacing-h3);
+  }
+
+  h4 {
+    font-size: var(--text-h4);
+    line-height: var(--line-height-h4);
+    letter-spacing: var(--letter-spacing-h4);
+  }
+  
+  h5 {
+    font-size: var(--text-h5);
+    line-height: var(--line-height-h5);
+    letter-spacing: var(--letter-spacing-h5);
+  }
+  h6 {
+    font-size: var(--text-h6);
+    line-height: var(--line-height-h6);
+    letter-spacing: var(--letter-spacing-h6);
+  }
+}
+
+/* Custom components */
+@layer components {
+  .btn-primary {
+    background-color: var(--color-raw-sienna);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--color-pale-orange);
+  }
+
+  .section-padding {
+    @apply px-6 md:px-10 lg:px-40 py-16;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
