@@ -73,7 +73,6 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
     return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
   };
 
-  // Prevent body scroll when modal is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -89,13 +88,11 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
 
   return (
     <>
-      {/* Backdrop */}
       <div 
         className="fixed inset-0 bg-black/50 z-40"
         onClick={onClose}
       />
 
-      {/* Modal */}
       <div className="fixed top-24 right-6 md:right-10 lg:right-40 w-[90%] md:w-[377px] bg-white rounded-lg shadow-2xl z-50 p-8">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">

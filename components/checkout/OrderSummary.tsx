@@ -104,7 +104,6 @@ export function OrderSummary({
           )}
         </button>
 
-        {/* Empty cart message */}
         {cartItems.length === 0 && (
           <p className="text-center text-very-dark/50 text-sm mt-3">
             Your cart is empty

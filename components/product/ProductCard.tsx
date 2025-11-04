@@ -30,7 +30,6 @@ export function ProdutCard ({ products }: { products: any[] }) {
                 {product.name}
               </h5>
 
-              {/* See Product Button */}
                <button
                 onClick={() => router.push(`/product/${product.slug}`)}
                 className="btn-primary"

@@ -17,7 +17,6 @@ export function ProductFeatures({ product }: { product: any }) {
             </div>
           </div>
 
-          {/* In the Box */}
           <div>
             <h3 className="font-bold uppercase mb-6 md:mb-8">
               IN THE BOX

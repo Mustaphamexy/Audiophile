@@ -46,10 +46,8 @@ export default function ProductDetailPage() {
     localStorage.setItem('cart', JSON.stringify(cart));
     window.dispatchEvent(new Event('storage'));
     
-    // Show success message
     setShowAddedToCart(true);
     
-    // Auto hide after 3 seconds
     setTimeout(() => {
       setShowAddedToCart(false);
     }, 3000);
@@ -58,7 +56,6 @@ export default function ProductDetailPage() {
   const incrementQuantity = () => setQuantity(prev => prev + 1);
   const decrementQuantity = () => setQuantity(prev => Math.max(1, prev - 1));
 
-  // Loading state
   if (product === undefined) {
     return (
       <main className="font-manrope py-20 text-center">
@@ -69,7 +66,6 @@ export default function ProductDetailPage() {
     );
   }
 
-  // Product not found
   if (product === null) {
     return (
       <main className="font-manrope py-20 text-center">
@@ -88,7 +84,6 @@ export default function ProductDetailPage() {
 
   return (
     <main className="font-manrope">
-      {/* Success Notification */}
       {showAddedToCart && (
         <div className="fixed top-24 left-1/2 transform -translate-x-1/2 z-50 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 animate-fade-in">
           <Check size={20} />
@@ -138,7 +133,6 @@ export default function ProductDetailPage() {
 
               {/* Quantity and Add to Cart */}
               <div className="flex gap-4">
-                {/* Quantity Selector */}
                 <div className="bg-off-white flex items-center">
                   <button 
                     onClick={decrementQuantity}
@@ -187,7 +181,6 @@ export default function ProductDetailPage() {
         </div>
       </section>
 
-      {/* Other Sections */}
       <ProductFeatures product={product} />
       <ProductGallery gallery={product.gallery} />
       <ProdutCard products={product.others} />

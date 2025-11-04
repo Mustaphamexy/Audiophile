@@ -8,7 +8,6 @@ import AboutSection from '@/components/home/AboutSection';
 import { useRouter } from "next/navigation";
 
 
-// Product data
 const headphonesProducts = [
   {
     id: 1,
@@ -20,7 +19,6 @@ const headphonesProducts = [
   },
 ];
 
-// Headphones Category Page
 export default function EarphonesPage() {
 
     const router = useRouter();

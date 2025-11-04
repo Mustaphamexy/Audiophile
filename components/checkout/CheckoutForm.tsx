@@ -180,7 +180,6 @@ export default function CheckoutForm() {
     // Prevent duplicate submissions
     if (isSubmitting) return;
     
-    // Mark all fields as touched
     const allTouched = Object.keys(formData).reduce((acc, key) => {
       acc[key] = true;
       return acc;
@@ -202,7 +201,6 @@ export default function CheckoutForm() {
     setSubmitError('');
 
     try {
-      // Generate order ID
       const newOrderId = 'ORD-' + Math.random().toString(36).substr(2, 9).toUpperCase();
       setOrderId(newOrderId);
       
@@ -224,12 +222,10 @@ export default function CheckoutForm() {
         grandTotal,
       };
       
-      // Save order to Convex first
       await createOrder(orderData);
       
       console.log('Order saved to Convex successfully!');
       
-      // Then send confirmation email
       try {
         const emailResponse = await fetch('/api/send-email', {
           method: 'POST',
@@ -243,11 +239,9 @@ export default function CheckoutForm() {
           console.log('Confirmation email sent successfully!');
         } else {
           console.error('Email sending failed, but order was saved');
-          // Don't throw error - order is already saved to Convex
         }
       } catch (emailError) {
         console.error('Email sending error:', emailError);
-        // Continue anyway - order is saved to Convex
       }
       
       // Show confirmation modal

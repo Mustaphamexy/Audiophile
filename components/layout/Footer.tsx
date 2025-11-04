@@ -83,7 +83,6 @@ export default function Footer() {
 
           {/* Description and Social Icons section */}
           <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end">
-            {/* Description */}
             <div className="max-w-[540px] mb-12 md:mb-20 lg:mb-0 text-center md:text-left">
               <p className="text-[15px] leading-[25px] text-white/50 font-medium">
                 Audiophile is an all in one stop to fulfill your audio needs.
@@ -93,7 +92,6 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* Social icons - Desktop only (positioned at bottom right) */}
             <div className="hidden lg:flex space-x-4">
               <a
                 href="#"
@@ -121,12 +119,10 @@ export default function Footer() {
 
           {/* Bottom section - Copyright and Social (Mobile/Tablet) */}
           <div className="flex flex-col md:flex-row md:justify-between md:items-center mt-12 md:mt-8 lg:mt-14">
-            {/* Copyright */}
             <p className="text-[15px] font-bold text-white/50 text-center md:text-left mb-12 md:mb-0">
               Copyright 2021. All Rights Reserved
             </p>
 
-            {/* Social icons - Mobile and Tablet */}
             <div className="flex lg:hidden justify-center md:justify-end space-x-4">
               <a
                 href="#"

@@ -13,7 +13,6 @@ const slug = "xx99-mark-two-headphones";
   return (
     <section className="relative w-full overflow-hidden">
       <div className="absolute inset-0 -top-10 lg:-top-30  ">
-        {/* Mobile Image */}
         <img
           src="/images/desktop/Hero-image-Phone.png"
           alt="XX99 Mark II Headphones"
@@ -27,7 +26,6 @@ const slug = "xx99-mark-two-headphones";
           className="hidden lg:block w-full h-full object-cover"
         />
         
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/40" />
       </div>
 

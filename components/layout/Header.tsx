@@ -12,7 +12,6 @@ export default function Header() {
   const [cartCount, setCartCount] = useState(0);
   const router = useRouter();
 
-  // Update cart count when cart changes
   useEffect(() => {
     const updateCartCount = () => {
       const savedCart = localStorage.getItem('cart');
@@ -28,7 +27,6 @@ export default function Header() {
     // Initial load
     updateCartCount();
 
-    // Listen for cart updates
     window.addEventListener('storage', updateCartCount);
     window.addEventListener('cartUpdated', updateCartCount);
 

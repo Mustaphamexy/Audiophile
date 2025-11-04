@@ -3,7 +3,6 @@ export default function AboutSection() {
     <section className="bg-white pb-24 md:pb-24 lg:pb-32">
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32 items-center">
-          {/* Text Content - First on mobile, second on desktop */}
           <div className="text-center lg:text-left order-2 lg:order-1">
             <h2 className="font-bold uppercase mb-8">
               BRINGING YOU THE <span className="text-raw-sienna">BEST</span> AUDIO GEAR
